@@ -1,10 +1,9 @@
 window.addEventListener("load", function () {
   var form = document.getElementById("form");
   form.addEventListener("submit", onFormSubmit);
-
 });
 
-var onFormSubmit = function() {
+var onFormSubmit = function () {
   event.preventDefault();
   var elements = event.target.children;
   console.log("elements", elements);
@@ -17,4 +16,4 @@ var onFormSubmit = function() {
 
   var amount = elements[4].value;
   console.log("amount", amount);
-}
+};

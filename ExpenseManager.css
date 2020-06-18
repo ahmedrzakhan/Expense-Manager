@@ -1,5 +1,3 @@
-
-
 body {
   background: #fff;
 }
@@ -17,7 +15,8 @@ body {
   margin: auto;
 }
 
-input, select {
+input,
+select {
   height: 27px;
   width: 130px;
   color: #000;
@@ -33,8 +32,9 @@ button {
   color: darkcyan;
 }
 
-h1{
+h1 {
   color: indianred;
+  text-align: center;
 }
 
 .totalRecordsContainer > h2 {
@@ -48,3 +48,23 @@ h1{
 .totalRecordsContainer > h2 + h2 + h2 {
   color: royalblue;
 }
+
+.allRecordsContainer {
+  height: auto;
+  width: 90%;
+  /* border: 1px solid yellowgreen; */
+  margin-top: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+.tableContainer {
+  margin: auto;
+  /* border: 1px solid purple; */
+  width: 40%;
+}
+
+.tableContainer > table {
+  padding-left: 70px;
+}
+
