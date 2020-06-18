@@ -4,15 +4,18 @@ body {
 
 .inputAndTotalsContainer {
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 20px;
 }
 
 .inputAndTotalsContainer > div {
-  border: 1px solid #ccc;
   width: 40%;
   height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: lavenderblush;
   margin: auto;
+  padding: 10px;
 }
 
 input,
