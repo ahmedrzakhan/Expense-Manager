@@ -12,9 +12,33 @@ var manager = {
     // Render table
     renderTable(this.records);
     console.log("records", this.records);
+    // Update Current Balance
+    this.updateTotalsRecords();
+  },
+  // Update Current Balance
+  // Update Total Expenses
+  // Update Total Incomes
+  updateTotalsRecords: function () {
+    var total = 0,
+      expenses = 0,
+      incomes = 0;
+    for (var i = 0; i < this.records.length; i++) {
+      var record = this.records[i];
+      if (record.type === "credit") {
+        total = total + Number(record.amount);
+        incomes = incomes + Number(record.amount);
+      } else {
+        total = total - Number(record.amount);
+        expenses = expenses + Number(record.amount);
+      }
+    }
+    this.currentBalance = total;
+    this.totalExpenses = expenses;
+    this.totalIncomes = incomes;
+    displayTotalRecords();
   },
 };
-
+// On window load
 window.addEventListener("load", function () {
   var form = document.getElementById("form");
   form.addEventListener("submit", onFormSubmit);
@@ -55,7 +79,7 @@ var renderTable = function (item) {
   var firstRow = createRow({
     id: "Id",
     type: "Type",
-    source: "Source",
+    source: "Source / Paid To",
     amount: "Amount",
   });
 
@@ -87,4 +111,17 @@ var createRow = function (elem) {
   row.append(idColumn, typeColumn, sourceColumn, amountColumn);
 
   return row;
+};
+
+// Display Total Expenses, Current Balance, Total Income
+var displayTotalRecords = function () {
+  var currentBalance = document.getElementById("currentBalance");
+  currentBalance.textContent =
+    "Current Balance:" + " " + manager.currentBalance;
+
+  var totalExpenses = document.getElementById("totalExpenses");
+  totalExpenses.textContent = "Total Expenses:" + " " + manager.totalExpenses;
+
+  var totalIncomes = document.getElementById("totalIncomes");
+  totalIncomes.textContent = "Total Incomes:" + " " + manager.totalIncomes;
 };
