@@ -1,6 +1,4 @@
-* {
-  color: cornflowerblue;
-}
+
 
 body {
   background: #fff;
@@ -33,4 +31,20 @@ button {
   border: 1px solid darkcyan;
   margin: 5px 0 0 15px;
   color: darkcyan;
+}
+
+h1{
+  color: indianred;
+}
+
+.totalRecordsContainer > h2 {
+  color: olivedrab;
+}
+
+.totalRecordsContainer > h2 + h2 {
+  color: rgb(104, 103, 92);
+}
+
+.totalRecordsContainer > h2 + h2 + h2 {
+  color: royalblue;
 }
