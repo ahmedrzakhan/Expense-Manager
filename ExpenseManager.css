@@ -1,3 +1,36 @@
+* {
+  color: cornflowerblue;
+}
+
 body {
-  background: green;
+  background: #fff;
+}
+
+.inputAndTotalsContainer {
+  display: flex;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.inputAndTotalsContainer > div {
+  border: 1px solid #ccc;
+  width: 40%;
+  height: 300px;
+  margin: auto;
+}
+
+input, select {
+  height: 27px;
+  width: 130px;
+  color: #000;
+  margin: 10px 0 10px 0;
+}
+
+button {
+  height: 38px;
+  width: 110px;
+  border-radius: 3px;
+  border: 1px solid darkcyan;
+  margin: 5px 0 0 15px;
+  color: darkcyan;
 }

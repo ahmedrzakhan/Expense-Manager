@@ -6,6 +6,39 @@
     </title>
     <link rel="stylesheet" href="ExpenseManager.css" />
     <body>
+      <!-- Main Container -->
+      <div class="mainContainer">
+        <!-- Box Container -->
+        <div class="inputAndTotalsContainer">
+          <!-- Input Box -->
+          <div class="inputContainer">
+            <h2>Enter Details</h2>
+            <!-- Form -->
+            <form id="form">
+              <!-- Type -->
+              Type:
+                <select defaultValue="credit">
+                  <option value="credit">Credit</option>
+                  <option value="debit">Debit</option>
+                </select>
+                <br />
+              <!-- Source -->
+                Source / Paid To:
+                <input type="text" />
+                <br />
+              <!-- Amount -->
+                Amount:
+                <input type="text" />
+                <br />
+                <!-- Submit Button -->
+                <button id="submit">Submit</button>
+            </form>
+          </div>
+          <!-- totalRecordsContainer -->
+          <div class="totalRecordsContainer"></div>
+        </div>
+      </div>
+
       <script src="ExpenseManager.js"></script>
     </body>
   </head>
